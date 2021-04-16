@@ -1,0 +1,71 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-image: url(images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.Initialpart {
+  background-image: url(images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  border: solid 2px blue;
+}
+
+.bigsquare {
+  border: solid 2px red;
+  width: 100%;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 10px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider :hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider ::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  background-image: url(images/icon-slider.svg);
+  cursor: pointer;
+}
+
+.slider ::-moz-range-thumb {
+  width: 50px;
+  height: 50px;
+  border: solid 2px red;
+  background-image: url(images/icon-slider.svg);
+  cursor: pointer;
+}
+
+.Startmytrial-btn {
+  border-radius: 45%;
+  background-color: blue;
+  color: aliceblue;
+}
