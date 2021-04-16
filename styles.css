@@ -38,6 +38,7 @@ body {
   border: solid 2px cyan;
   flex-direction: column;
   text-align: center;
+  padding: 10px;
 }
 
 .sidebyside {
@@ -46,8 +47,6 @@ body {
   border: solid 2px blue;
   padding: 20px 10px;
 }
-
-
 
 .redbtn {
   background-color: hsl(14, 92%, 95%);
@@ -69,43 +68,49 @@ ul {
 
 .slidecontainer {
   width: 100%; /* Width of the outside container */
+  padding: 30px 10px;
 }
 
 /* The slider itself */
 .slider {
-  -webkit-appearance: none; /* Override default CSS styles */
-  appearance: none;
-  width: 100%; /* Full-width */
-  height: 10px; /* Specified height */
-  background: hsl(174, 86%, 45%); /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: hsl(174, 77%, 80%);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
   transition: opacity 0.2s;
+
 }
 
-/* Mouse-over effects */
-.slider :hover {
-  opacity: 1; /* Fully shown on mouse-over */
+.slider:hover {
+  opacity: 1;
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.slider ::-webkit-slider-thumb {
+.slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
-  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 40%;
+  border-radius: 40%;
+  text-align: justify;
+  padding: 15px;
+  margin: 10px;
   background-image: url(images/icon-slider.svg);
-  cursor: grab;
-  border: solid 2px red;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  background-color: hsl(174, 86%, 45%);
 }
 
-.slider ::-moz-range-thumb {
-  width: 50px;
-  height: 50px;
-  border: solid 2px red;
-  background-image: url(images/icon-slider.svg);
+.slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: hsl(223, 50%, 87%);
   cursor: pointer;
 }
 
