@@ -36,14 +36,14 @@ const price = document.querySelector("js-price");
 const srInfo = document.querySelector("js-sr-info");
 
 function fillSlider() {
-  const sliderProgress = hsl(174, 77%, 80%);
-  const sliderBackground = hsl(224, 65%, 95%);
+  const sliderProgress = hsl(174, 77 %, 80 %);
+  const sliderBackground = hsl(224, 65 %, 95 %);
 
   const breakpoint = "${Number(slider.value) * 25}%";
 
-  slider.style.backgroundImage = "linear-gradient(90deg, 
-        ${sliderProgress} ${breakpoint}, 
-        ${sliderBackground} ${breakpoint})";
+  slider.style.backgroundImage = "linear-gradient(90deg",
+    { sliderProgress } ${ breakpoint },
+  ${ sliderBackground } ${ breakpoint };
 }
 
 function getPageViews(index) {
@@ -63,7 +63,7 @@ function getPrice(index) {
 }
 
 function updateSrInfo(index) {
-  return `${getAriaPageViews(index)} ${getPrice(index)} dollars per month`;
+  return "${getAriaPageViews(index)} ${getPrice(index)} dollars per month";
 }
 
 fillSlider();
