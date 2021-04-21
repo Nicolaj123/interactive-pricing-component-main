@@ -1,69 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="scripts.js">
-  
-  <title>Frontend Mentor | Interactive pricing component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Interactive pricing component</title>
+
+    <script src="app.js" defer></script>
+    <script src="path/to/vanilla.js"></script>
+  </head>
   <body>
-    <div class="Initialpart">
-      <h1 class="firsttitle">
-  Simple, traffic-based pricing
-      </h1>
-      <h4 class="subtitle">
-        Sign-up for our 30-day trial. <br> 
-        No credit card required.
-      </h4>
-    </div>
-<!--SLIDER SCRIPT-->
-<div class="bigsquare">
-  <div class="sliderbtn">
-  100k Pageviews
-    <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <main>
+      <section class="pricing">
+        <header class="pricing__header">
+          <h1 class="pricing__heading">Simple, traffic-based pricing</h1>
+          <p class="pricing__tagline">
+            Sign-up for our 30-day trial. No credit card required.
+          </p>
+        </header>
+        <form class="pricing__form js-form">
+          <div class="pricing__info">
+            <p class="pricing__views" aria-hidden="true">
+              <span class="js-views pricing__views-number">100K </span>
+              Pageviews
+            </p>
+            <p class="pricing__price" aria-hidden="true">
+              $ <span class="js-price">16.00</span>
+              <span class="pricing__month">/ month</span>
+            </p>
+            <p class="js-sr-info hidden-visually" aria-live="polite">
+              100 thousand PageViews 16 dollars per month
+            </p>
+            <div class="pricing__slider-container">
+              <input
+                type="range"
+                min="0"
+                max="4"
+                step="1"
+                value="2"
+                id="pageviews-slider"
+                name="pageviews"
+                class="pricing__slider"
+                aria-label="Choose monthly PageViews"
+              />
+            </div>
+            <fieldset class="pricing__billing js-billing">
+              <legend class="hidden-visually">Choose billing frequency</legend>
+              <div class="pricing__toggle-wrapper">
+                <input
+                  type="radio"
+                  name="billing"
+                  value="monthly"
+                  id="monthly"
+                  class="pricing__input"
+                  checked
+                />
+                <label for="monthly" class="pricing__label monthly"
+                  >Monthly Billing</label
+                >
+                <input
+                  type="radio"
+                  name="billing"
+                  value="yearly"
+                  id="yearly"
+                  class="pricing__input"
+                />
+                <label for="yearly" class="pricing__label"
+                  >Annual Billing<span
+                    class="pricing__label__discount"
+                    aria-label="25% off"
+                    >-25%</span
+                  ></label
+                >
+              </div>
+            </fieldset>
+          </div>
 
-      <p>Value: <span id="demo"></span></p>
-    </div>
-  </div>
-<!--END OF THE SLIDER SCRIPT-->
-
-  <div class="sidebyside">
-  Monthly Billing
-      <label class="switch">
-        <input type="checkbox">
-          <span class="slider round"></span>
-      </label>
-  Yearly Billing 
-  <button class="redbtn">-25%</button> 
-</div>
-
-  <ul>
-    <img src="images/icon-check.svg" alt="">       Unlimited websites</>
-        <br>
-        <br>
-    <img src="images/icon-check.svg" alt="">       100% Data ownership</img>
-        <br>
-        <br>
-    <img src="images/icon-check.svg" alt="">       Email reports
-  </ul>
-
-  <div class="bluebtn">
-    <button class="Startmytrial-btn"> Start my trial</button> 
-  </div>
-</div>
-  
-
-  <div class="attribution">
+          <div class="pricing__summary">
+            <ul class="pricing__benefits">
+              <li class="pricing__benefits__item">Unlimited websites</li>
+              <li class="pricing__benefits__item">100% data ownership</li>
+              <li class="pricing__benefits__item">Email reports</li>
+            </ul>
+            <button class="pricing__submit">Start my trial</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Nico Laje</a>.
-  </div>
-</body>
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
 </html>
